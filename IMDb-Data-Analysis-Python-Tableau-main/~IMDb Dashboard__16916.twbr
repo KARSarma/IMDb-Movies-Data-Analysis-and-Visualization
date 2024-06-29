@@ -1,0 +1,2432 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0308.0326                               -->
+<workbook original-version='18.1' source-build='2024.1.1 (20241.24.0308.0326)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='IMDbDashboard_By_Anirudha_Kuchibhotla' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='IMDB-Movie-Data' inline='true' name='federated.0jndpd31byytfi1eskx8s08rpf1g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='IMDB-Movie-Data' name='textscan.1jauxc0041s9111eq342l10ugq49'>
+            <connection class='textscan' directory='C:/Users/anisa/IE 6600 Lab/IMDb-Data-Analysis-Python-Tableau-main/IMDb-Data-Analysis-Python-Tableau-main' filename='IMDB-Movie-Data.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1jauxc0041s9111eq342l10ugq49' name='IMDB-Movie-Data.csv' table='[IMDB-Movie-Data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Rank' ordinal='0' />
+            <column datatype='string' name='Title' ordinal='1' />
+            <column datatype='string' name='Genre' ordinal='2' />
+            <column datatype='string' name='Description' ordinal='3' />
+            <column datatype='string' name='Director' ordinal='4' />
+            <column datatype='string' name='Actors' ordinal='5' />
+            <column datatype='integer' name='Year' ordinal='6' />
+            <column datatype='integer' name='Runtime (Minutes)' ordinal='7' />
+            <column datatype='real' name='Rating' ordinal='8' />
+            <column datatype='integer' name='Votes' ordinal='9' />
+            <column datatype='real' name='Revenue (Millions)' ordinal='10' />
+            <column datatype='integer' name='Metascore' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1jauxc0041s9111eq342l10ugq49' name='IMDB-Movie-Data.csv' table='[IMDB-Movie-Data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Rank' ordinal='0' />
+            <column datatype='string' name='Title' ordinal='1' />
+            <column datatype='string' name='Genre' ordinal='2' />
+            <column datatype='string' name='Description' ordinal='3' />
+            <column datatype='string' name='Director' ordinal='4' />
+            <column datatype='string' name='Actors' ordinal='5' />
+            <column datatype='integer' name='Year' ordinal='6' />
+            <column datatype='integer' name='Runtime (Minutes)' ordinal='7' />
+            <column datatype='real' name='Rating' ordinal='8' />
+            <column datatype='integer' name='Votes' ordinal='9' />
+            <column datatype='real' name='Revenue (Millions)' ordinal='10' />
+            <column datatype='integer' name='Metascore' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-refresh-mode='' incremental-updates='' required-client-version='' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Title]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Title</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Genre]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Genre</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Director</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Director]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Director</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actors</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Actors]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Actors</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Runtime (Minutes)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Runtime (Minutes)]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Runtime (Minutes)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rating]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Votes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Votes]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Votes</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Revenue (Millions)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Revenue (Millions)]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Revenue (Millions)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metascore</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Metascore]</local-name>
+            <parent-name>[IMDB-Movie-Data.csv]</parent-name>
+            <remote-alias>Metascore</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='IMDB-Movie-Data.csv' datatype='table' name='[__tableau_internal_object_id__].[IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/anisa/OneDrive/Documents/My Tableau Repository/Datasources/IMDB-Movie-Data.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rank]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rank</remote-alias>
+              <ordinal>0</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Title</remote-alias>
+              <ordinal>1</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>999</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Genre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Genre]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Genre</remote-alias>
+              <ordinal>2</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>207</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Description</remote-alias>
+              <ordinal>3</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Director</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Director]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Director</remote-alias>
+              <ordinal>4</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>644</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Actors</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Actors]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Actors</remote-alias>
+              <ordinal>5</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>996</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>6</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Runtime (Minutes)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Runtime (Minutes)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Runtime (Minutes)</remote-alias>
+              <ordinal>7</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>94</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rating</remote-alias>
+              <ordinal>8</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Votes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Votes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Votes</remote-alias>
+              <ordinal>9</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>997</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Revenue (Millions)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Revenue (Millions)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Revenue (Millions)</remote-alias>
+              <ordinal>10</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>815</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Metascore</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Metascore]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Metascore</remote-alias>
+              <ordinal>11</ordinal>
+              <family>IMDB-Movie-Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='IMDB-Movie-Data.csv' id='IMDB-Movie-Data.csv_4C3B6555562A4ACCB83ED32D858137E5'>
+            <properties context=''>
+              <relation connection='textscan.1jauxc0041s9111eq342l10ugq49' name='IMDB-Movie-Data.csv' table='[IMDB-Movie-Data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Rank' ordinal='0' />
+                  <column datatype='string' name='Title' ordinal='1' />
+                  <column datatype='string' name='Genre' ordinal='2' />
+                  <column datatype='string' name='Description' ordinal='3' />
+                  <column datatype='string' name='Director' ordinal='4' />
+                  <column datatype='string' name='Actors' ordinal='5' />
+                  <column datatype='integer' name='Year' ordinal='6' />
+                  <column datatype='integer' name='Runtime (Minutes)' ordinal='7' />
+                  <column datatype='real' name='Rating' ordinal='8' />
+                  <column datatype='integer' name='Votes' ordinal='9' />
+                  <column datatype='real' name='Revenue (Millions)' ordinal='10' />
+                  <column datatype='integer' name='Metascore' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Average Rating over Years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#0c0b00'>Average Rating over Years</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='real' name='[Rating]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Rating]' derivation='Avg' name='[avg:Rating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]' field-type='quantitative' max='2017' min='2005' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[avg:Rating:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.10000000000000001' max='7.2000000000000002' min='6.2999999999999998' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[avg:Rating:qk]' scope='rows' value='Rating' />
+            <format attr='title' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]' scope='cols' value='Year' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='tick-color' scope='cols' value='#000000' />
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='tick-color' scope='rows' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#128bb5' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0jndpd31byytfi1eskx8s08rpf1g].[avg:Rating:qk]</rows>
+        <cols>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{2BC01708-D456-4C02-8F3A-B514C6764C25}' />
+    </worksheet>
+    <worksheet name='Description'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Description</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='string' name='[Description]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Description]' derivation='None' name='[none:Description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Title:nk]' member='&quot;Transformers: Dark of the Moon&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#deb522' />
+            <format attr='band-color' scope='rows' value='#deb522' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Description:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3A7513A0-EDAE-4A59-8F17-22CBBC3D5803}' />
+    </worksheet>
+    <worksheet name='Director'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Director</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='string' name='[Director]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Director]' derivation='None' name='[none:Director:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Title:nk]' member='&quot;Transformers: Dark of the Moon&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Director:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{60DE3113-3E35-4693-990E-AEB6B03D5777}' />
+    </worksheet>
+    <worksheet name='Genre'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Genre</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Genre]' derivation='None' name='[none:Genre:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Title:nk]' member='&quot;Transformers: Dark of the Moon&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Genre:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{343E0096-BF54-4D76-8207-C805DEE25191}' />
+    </worksheet>
+    <worksheet name='Movies over Years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#0c0b00'>Movies over Years</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Title]' derivation='CountD' name='[ctd:Title:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]' field-type='quantitative' max='2019' min='2004' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]' field-type='quantitative' major-origin='50' major-spacing='50' max='350' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]' scope='rows' value='Number of Movies' />
+            <format attr='title' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]' scope='cols' value='Year' />
+            <format attr='tick-color' scope='rows' value='#000000' />
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='tick-color' scope='cols' value='#000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#128bb5' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]</rows>
+        <cols>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{7FB180A9-C97A-4C4C-B7C6-1ADB8E24EDBD}' />
+    </worksheet>
+    <worksheet name='Rating'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Rating</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='real' name='[Rating]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Rating]' derivation='None' name='[none:Rating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Title:nk]' member='&quot;Transformers: Dark of the Moon&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Rating:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3E513F62-93FE-4616-8592-07AD4DCDFB35}' />
+    </worksheet>
+    <worksheet name='Revenue over Years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#0c0b00'>Revenue over Years</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='real' name='[Revenue (Millions)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Revenue (Millions)]' derivation='Sum' name='[sum:Revenue (Millions):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[sum:Revenue (Millions):qk]' field-type='quantitative' major-origin='2000.0' major-spacing='2000.0' max='19000.0' min='2000.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]' field-type='quantitative' major-origin='2016' major-spacing='1' max='2016' min='2006' range-type='fixed' scope='cols' type='space' />
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='tick-color' scope='rows' value='#000000' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='tick-color' scope='cols' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#128bb5' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0jndpd31byytfi1eskx8s08rpf1g].[sum:Revenue (Millions):qk]</rows>
+        <cols>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{517EEBFD-A9CE-49A7-8101-CCF8EDF5B295}' />
+    </worksheet>
+    <worksheet name='Revenue vs. Rating'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Revenue vs. Rating</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='real' name='[Rating]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Revenue (Millions)]' role='measure' type='quantitative' />
+            <column-instance column='[Rating]' derivation='None' name='[none:Rating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Revenue (Millions)]' derivation='None' name='[none:Revenue (Millions):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Revenue (Millions):qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Revenue (Millions):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Rating:qk]' field-type='quantitative' max='10.343295505266942' min='-0.59689486571978756' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Revenue (Millions):qk]' field-type='quantitative' max='796.08115313046528' min='-688.5257364881769' range-type='fixed' scope='rows' type='space' />
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='tick-color' scope='rows' value='#000000' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='tick-color' scope='cols' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#128bb5' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Revenue (Millions):qk]</rows>
+        <cols>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Rating:qk]</cols>
+      </table>
+      <simple-id uuid='{46464DBB-37A3-4FE0-A4BD-AE0E8D2E1972}' />
+    </worksheet>
+    <worksheet name='Top 10 Directors'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Top 10 Directors by Number of Movies</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='string' name='[Director]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Title]' derivation='CountD' name='[ctd:Title:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Director]' derivation='None' name='[none:Director:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Director:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNTD([Title])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Director:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Director:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Ridley Scott&quot;</bucket>
+              <bucket>&quot;Paul W.S. Anderson&quot;</bucket>
+              <bucket>&quot;Michael Bay&quot;</bucket>
+              <bucket>&quot;M. Night Shyamalan&quot;</bucket>
+              <bucket>&quot;David Yates&quot;</bucket>
+              <bucket>&quot;Zack Snyder&quot;</bucket>
+              <bucket>&quot;Woody Allen&quot;</bucket>
+              <bucket>&quot;Peter Berg&quot;</bucket>
+              <bucket>&quot;Martin Scorsese&quot;</bucket>
+              <bucket>&quot;Justin Lin&quot;</bucket>
+              <bucket>&quot;J.J. Abrams&quot;</bucket>
+              <bucket>&quot;Denis Villeneuve&quot;</bucket>
+              <bucket>&quot;David Fincher&quot;</bucket>
+              <bucket>&quot;Danny Boyle&quot;</bucket>
+              <bucket>&quot;Christopher Nolan&quot;</bucket>
+              <bucket>&quot;Antoine Fuqua&quot;</bucket>
+              <bucket>&quot;Tim Burton&quot;</bucket>
+              <bucket>&quot;Steven Spielberg&quot;</bucket>
+              <bucket>&quot;Ron Howard&quot;</bucket>
+              <bucket>&quot;Robert Zemeckis&quot;</bucket>
+              <bucket>&quot;Quentin Tarantino&quot;</bucket>
+              <bucket>&quot;Peter Jackson&quot;</bucket>
+              <bucket>&quot;Paul Feig&quot;</bucket>
+              <bucket>&quot;Nicholas Stoller&quot;</bucket>
+              <bucket>&quot;Mike Flanagan&quot;</bucket>
+              <bucket>&quot;Matthew Vaughn&quot;</bucket>
+              <bucket>&quot;Louis Leterrier&quot;</bucket>
+              <bucket>&quot;Lars von Trier&quot;</bucket>
+              <bucket>&quot;Jon Favreau&quot;</bucket>
+              <bucket>&quot;Joe Wright&quot;</bucket>
+              <bucket>&quot;James Wan&quot;</bucket>
+              <bucket>&quot;Guy Ritchie&quot;</bucket>
+              <bucket>&quot;Guillermo del Toro&quot;</bucket>
+              <bucket>&quot;Gore Verbinski&quot;</bucket>
+              <bucket>&quot;Francis Lawrence&quot;</bucket>
+              <bucket>&quot;Dennis Dugan&quot;</bucket>
+              <bucket>&quot;David O. Russell&quot;</bucket>
+              <bucket>&quot;D.J. Caruso&quot;</bucket>
+              <bucket>&quot;Clint Eastwood&quot;</bucket>
+              <bucket>&quot;Ben Affleck&quot;</bucket>
+              <bucket>&quot;Alexandre Aja&quot;</bucket>
+              <bucket>&quot;Adam McKay&quot;</bucket>
+              <bucket>&quot;Will Gluck&quot;</bucket>
+              <bucket>&quot;Wes Anderson&quot;</bucket>
+              <bucket>&quot;Tom Tykwer&quot;</bucket>
+              <bucket>&quot;Tom Hooper&quot;</bucket>
+              <bucket>&quot;Tarsem Singh&quot;</bucket>
+              <bucket>&quot;Sylvester Stallone&quot;</bucket>
+              <bucket>&quot;Steven Soderbergh&quot;</bucket>
+              <bucket>&quot;Steve McQueen&quot;</bucket>
+              <bucket>&quot;Shawn Levy&quot;</bucket>
+              <bucket>&quot;Seth MacFarlane&quot;</bucket>
+              <bucket>&quot;Sam Mendes&quot;</bucket>
+              <bucket>&quot;Roland Emmerich&quot;</bucket>
+              <bucket>&quot;Robert Schwentke&quot;</bucket>
+              <bucket>&quot;Richard LaGravenese&quot;</bucket>
+              <bucket>&quot;Phil Lord&quot;</bucket>
+              <bucket>&quot;Paul Thomas Anderson&quot;</bucket>
+              <bucket>&quot;Paul Greengrass&quot;</bucket>
+              <bucket>&quot;Nicolas Winding Refn&quot;</bucket>
+              <bucket>&quot;Neill Blomkamp&quot;</bucket>
+              <bucket>&quot;Neil Burger&quot;</bucket>
+              <bucket>&quot;McG&quot;</bucket>
+              <bucket>&quot;Matt Reeves&quot;</bucket>
+              <bucket>&quot;Marc Webb&quot;</bucket>
+              <bucket>&quot;Kevin Smith&quot;</bucket>
+              <bucket>&quot;Kenneth Branagh&quot;</bucket>
+              <bucket>&quot;Judd Apatow&quot;</bucket>
+              <bucket>&quot;Jon M. Chu&quot;</bucket>
+              <bucket>&quot;John Lee Hancock&quot;</bucket>
+              <bucket>&quot;John Hillcoat&quot;</bucket>
+              <bucket>&quot;Jean-Marc Vallée&quot;</bucket>
+              <bucket>&quot;Jaume Collet-Serra&quot;</bucket>
+              <bucket>&quot;James Gunn&quot;</bucket>
+              <bucket>&quot;Greg Mottola&quot;</bucket>
+              <bucket>&quot;Glenn Ficarra&quot;</bucket>
+              <bucket>&quot;George Tillman Jr.&quot;</bucket>
+              <bucket>&quot;Gavin Hood&quot;</bucket>
+              <bucket>&quot;Ethan Coen&quot;</bucket>
+              <bucket>&quot;Eli Roth&quot;</bucket>
+              <bucket>&quot;Edward Zwick&quot;</bucket>
+              <bucket>&quot;Edgar Wright&quot;</bucket>
+              <bucket>&quot;Duncan Jones&quot;</bucket>
+              <bucket>&quot;Derek Cianfrance&quot;</bucket>
+              <bucket>&quot;David Ayer&quot;</bucket>
+              <bucket>&quot;Darren Aronofsky&quot;</bucket>
+              <bucket>&quot;Bryan Singer&quot;</bucket>
+              <bucket>&quot;Brad Bird&quot;</bucket>
+              <bucket>&quot;Ben Stiller&quot;</bucket>
+              <bucket>&quot;Andrew Stanton&quot;</bucket>
+              <bucket>&quot;Alejandro González Iñárritu&quot;</bucket>
+              <bucket>&quot;Yorgos Lanthimos&quot;</bucket>
+              <bucket>&quot;Xavier Dolan&quot;</bucket>
+              <bucket>&quot;Wes Ball&quot;</bucket>
+              <bucket>&quot;Tony Scott&quot;</bucket>
+              <bucket>&quot;Todd Phillips&quot;</bucket>
+              <bucket>&quot;Timur Bekmambetov&quot;</bucket>
+              <bucket>&quot;Thor Freudenthal&quot;</bucket>
+              <bucket>&quot;Terrence Malick&quot;</bucket>
+              <bucket>&quot;Tate Taylor&quot;</bucket>
+              <bucket>&quot;Spike Lee&quot;</bucket>
+              <bucket>&quot;Shane Black&quot;</bucket>
+              <bucket>&quot;Sean Penn&quot;</bucket>
+              <bucket>&quot;Sean Anders&quot;</bucket>
+              <bucket>&quot;Scott Hicks&quot;</bucket>
+              <bucket>&quot;Scott Derrickson&quot;</bucket>
+              <bucket>&quot;Scott Cooper&quot;</bucket>
+              <bucket>&quot;Sam Raimi&quot;</bucket>
+              <bucket>&quot;Rupert Wyatt&quot;</bucket>
+              <bucket>&quot;Ruben Fleischer&quot;</bucket>
+              <bucket>&quot;Ron Clements&quot;</bucket>
+              <bucket>&quot;Robert Rodriguez&quot;</bucket>
+              <bucket>&quot;Robert Luketic&quot;</bucket>
+              <bucket>&quot;Rob Marshall&quot;</bucket>
+              <bucket>&quot;Rob Cohen&quot;</bucket>
+              <bucket>&quot;Richard Linklater&quot;</bucket>
+              <bucket>&quot;Rawson Marshall Thurber&quot;</bucket>
+              <bucket>&quot;Rajkumar Hirani&quot;</bucket>
+              <bucket>&quot;Pierre Morel&quot;</bucket>
+              <bucket>&quot;Pierre Coffin&quot;</bucket>
+              <bucket>&quot;Phillip Noyce&quot;</bucket>
+              <bucket>&quot;Peyton Reed&quot;</bucket>
+              <bucket>&quot;Pete Travis&quot;</bucket>
+              <bucket>&quot;Pete Docter&quot;</bucket>
+              <bucket>&quot;Paul McGuigan&quot;</bucket>
+              <bucket>&quot;Oz Perkins&quot;</bucket>
+              <bucket>&quot;Oliver Stone&quot;</bucket>
+              <bucket>&quot;Morten Tyldum&quot;</bucket>
+              <bucket>&quot;Mikael Håfström&quot;</bucket>
+              <bucket>&quot;Michael Patrick King&quot;</bucket>
+              <bucket>&quot;Michael Mann&quot;</bucket>
+              <bucket>&quot;Michael Dowse&quot;</bucket>
+              <bucket>&quot;Mel Gibson&quot;</bucket>
+              <bucket>&quot;Martin McDonagh&quot;</bucket>
+              <bucket>&quot;Martin Campbell&quot;</bucket>
+              <bucket>&quot;Marcus Nispel&quot;</bucket>
+              <bucket>&quot;Marc Forster&quot;</bucket>
+              <bucket>&quot;Luc Besson&quot;</bucket>
+              <bucket>&quot;Lone Scherfig&quot;</bucket>
+              <bucket>&quot;Len Wiseman&quot;</bucket>
+              <bucket>&quot;Lee Daniels&quot;</bucket>
+              <bucket>&quot;Lasse Hallström&quot;</bucket>
+              <bucket>&quot;Kirk Jones&quot;</bucket>
+              <bucket>&quot;Kathryn Bigelow&quot;</bucket>
+              <bucket>&quot;Karyn Kusama&quot;</bucket>
+              <bucket>&quot;Justin Kurzel&quot;</bucket>
+              <bucket>&quot;Joss Whedon&quot;</bucket>
+              <bucket>&quot;Joseph Kosinski&quot;</bucket>
+              <bucket>&quot;Jonathan Liebesman&quot;</bucket>
+              <bucket>&quot;Jonathan Levine&quot;</bucket>
+              <bucket>&quot;John R. Leonetti&quot;</bucket>
+              <bucket>&quot;John Lasseter&quot;</bucket>
+              <bucket>&quot;John Crowley&quot;</bucket>
+              <bucket>&quot;John Carney&quot;</bucket>
+              <bucket>&quot;Jeff Wadlow&quot;</bucket>
+              <bucket>&quot;Jeff Nichols&quot;</bucket>
+              <bucket>&quot;Jason Reitman&quot;</bucket>
+              <bucket>&quot;Jason Moore&quot;</bucket>
+              <bucket>&quot;James DeMonaco&quot;</bucket>
+              <bucket>&quot;J.A. Bayona&quot;</bucket>
+              <bucket>&quot;Henry Joost&quot;</bucket>
+              <bucket>&quot;Harald Zwart&quot;</bucket>
+              <bucket>&quot;George Nolfi&quot;</bucket>
+              <bucket>&quot;George Miller&quot;</bucket>
+              <bucket>&quot;Gavin O&apos;Connor&quot;</bucket>
+              <bucket>&quot;Gary Ross&quot;</bucket>
+              <bucket>&quot;Gareth Edwards&quot;</bucket>
+              <bucket>&quot;Gabriele Muccino&quot;</bucket>
+              <bucket>&quot;Frank Coraci&quot;</bucket>
+              <bucket>&quot;Fede Alvarez&quot;</bucket>
+              <bucket>&quot;F. Gary Gray&quot;</bucket>
+              <bucket>&quot;Evan Goldberg&quot;</bucket>
+              <bucket>&quot;Elizabeth Banks&quot;</bucket>
+              <bucket>&quot;Doug Liman&quot;</bucket>
+              <bucket>&quot;Dean DeBlois&quot;</bucket>
+              <bucket>&quot;David Lynch&quot;</bucket>
+              <bucket>&quot;David Gordon Green&quot;</bucket>
+              <bucket>&quot;David Frankel&quot;</bucket>
+              <bucket>&quot;David Bowers&quot;</bucket>
+              <bucket>&quot;Damien Chazelle&quot;</bucket>
+              <bucket>&quot;Christopher Smith&quot;</bucket>
+              <bucket>&quot;Christopher McQuarrie&quot;</bucket>
+              <bucket>&quot;Christian Ditter&quot;</bucket>
+              <bucket>&quot;Chris Columbus&quot;</bucket>
+              <bucket>&quot;Burr Steers&quot;</bucket>
+              <bucket>&quot;Brian Helgeland&quot;</bucket>
+              <bucket>&quot;Brett Ratner&quot;</bucket>
+              <bucket>&quot;Bong Joon Ho&quot;</bucket>
+              <bucket>&quot;Bill Condon&quot;</bucket>
+              <bucket>&quot;Ben Wheatley&quot;</bucket>
+              <bucket>&quot;Baz Luhrmann&quot;</bucket>
+              <bucket>&quot;Barry Sonnenfeld&quot;</bucket>
+              <bucket>&quot;Anthony Russo&quot;</bucket>
+              <bucket>&quot;Anne Fletcher&quot;</bucket>
+              <bucket>&quot;Ang Lee&quot;</bucket>
+              <bucket>&quot;Andrew Niccol&quot;</bucket>
+              <bucket>&quot;Alfonso Cuarón&quot;</bucket>
+              <bucket>&quot;Alan Taylor&quot;</bucket>
+              <bucket>&quot;Adam Wingard&quot;</bucket>
+              <bucket>&quot;Adam Shankman&quot;</bucket>
+              <bucket>&quot;Zackary Adler&quot;</bucket>
+              <bucket>&quot;Yimou Zhang&quot;</bucket>
+              <bucket>&quot;William Oldroyd&quot;</bucket>
+              <bucket>&quot;William Brent Bell&quot;</bucket>
+              <bucket>&quot;Will Slocombe&quot;</bucket>
+              <bucket>&quot;Whit Stillman&quot;</bucket>
+              <bucket>&quot;Wes Craven&quot;</bucket>
+              <bucket>&quot;Werner Herzog&quot;</bucket>
+              <bucket>&quot;Warren Beatty&quot;</bucket>
+              <bucket>&quot;Walter Hill&quot;</bucket>
+              <bucket>&quot;Walt Dohrn&quot;</bucket>
+              <bucket>&quot;Wally Pfister&quot;</bucket>
+              <bucket>&quot;Tyler Shields&quot;</bucket>
+              <bucket>&quot;Travis Knight&quot;</bucket>
+              <bucket>&quot;Tony Gilroy&quot;</bucket>
+              <bucket>&quot;Tomas Alfredson&quot;</bucket>
+              <bucket>&quot;Tom Six&quot;</bucket>
+              <bucket>&quot;Tom McGrath&quot;</bucket>
+              <bucket>&quot;Tom McCarthy&quot;</bucket>
+              <bucket>&quot;Tom Gormican&quot;</bucket>
+              <bucket>&quot;Tom Ford&quot;</bucket>
+              <bucket>&quot;Todor Chapkanov&quot;</bucket>
+              <bucket>&quot;Todd Haynes&quot;</bucket>
+              <bucket>&quot;Tim Miller&quot;</bucket>
+              <bucket>&quot;Tim Johnson&quot;</bucket>
+              <bucket>&quot;Thomas Vinterberg&quot;</bucket>
+              <bucket>&quot;Theodore Melfi&quot;</bucket>
+              <bucket>&quot;Thea Sharrock&quot;</bucket>
+              <bucket>&quot;Terry Jones&quot;</bucket>
+              <bucket>&quot;Terry Gilliam&quot;</bucket>
+              <bucket>&quot;Terry George&quot;</bucket>
+              <bucket>&quot;Terence Davies&quot;</bucket>
+              <bucket>&quot;Taylor Hackford&quot;</bucket>
+              <bucket>&quot;Taika Waititi&quot;</bucket>
+              <bucket>&quot;Stewart Hendler&quot;</bucket>
+              <bucket>&quot;Steven Shainberg&quot;</bucket>
+              <bucket>&quot;Steven R. Monroe&quot;</bucket>
+              <bucket>&quot;Steven Quale&quot;</bucket>
+              <bucket>&quot;Steven Knight&quot;</bucket>
+              <bucket>&quot;Steven Brill&quot;</bucket>
+              <bucket>&quot;Stephen Sommers&quot;</bucket>
+              <bucket>&quot;Stephen Gaghan&quot;</bucket>
+              <bucket>&quot;Stephen Frears&quot;</bucket>
+              <bucket>&quot;Stephen Fingleton&quot;</bucket>
+              <bucket>&quot;Stephen Chbosky&quot;</bucket>
+              <bucket>&quot;Srdjan Spasojevic&quot;</bucket>
+              <bucket>&quot;Spike Jonze&quot;</bucket>
+              <bucket>&quot;Sofia Coppola&quot;</bucket>
+              <bucket>&quot;So Yong Kim&quot;</bucket>
+              <bucket>&quot;Simon West&quot;</bucket>
+              <bucket>&quot;Simon Verhoeven&quot;</bucket>
+              <bucket>&quot;Simon Stone&quot;</bucket>
+              <bucket>&quot;Simon Curtis&quot;</bucket>
+              <bucket>&quot;Simon Aboud&quot;</bucket>
+              <bucket>&quot;Shawn Burkett&quot;</bucket>
+              <bucket>&quot;Sharon Maguire&quot;</bucket>
+              <bucket>&quot;Shana Feste&quot;</bucket>
+              <bucket>&quot;Seth Gordon&quot;</bucket>
+              <bucket>&quot;Sergei Bodrov&quot;</bucket>
+              <bucket>&quot;Sean Foley&quot;</bucket>
+              <bucket>&quot;Sean Ellis&quot;</bucket>
+              <bucket>&quot;Scott Waugh&quot;</bucket>
+              <bucket>&quot;Scott Stewart&quot;</bucket>
+              <bucket>&quot;Scott Frank&quot;</bucket>
+              <bucket>&quot;Scot Armstrong&quot;</bucket>
+              <bucket>&quot;Saul Dibb&quot;</bucket>
+              <bucket>&quot;Sang-ho Yeon&quot;</bucket>
+              <bucket>&quot;Sam Taylor-Johnson&quot;</bucket>
+              <bucket>&quot;S.S. Rajamouli&quot;</bucket>
+              <bucket>&quot;S. Craig Zahler&quot;</bucket>
+              <bucket>&quot;Ryûhei Kitamura&quot;</bucket>
+              <bucket>&quot;Ryan Coogler&quot;</bucket>
+              <bucket>&quot;Rupert Sanders&quot;</bucket>
+              <bucket>&quot;Ross Katz&quot;</bucket>
+              <bucket>&quot;Roman Polanski&quot;</bucket>
+              <bucket>&quot;Rolfe Kanefsky&quot;</bucket>
+              <bucket>&quot;Roger Spottiswoode&quot;</bucket>
+              <bucket>&quot;Robin Swicord&quot;</bucket>
+              <bucket>&quot;Robert Stromberg&quot;</bucket>
+              <bucket>&quot;Robert Eggers&quot;</bucket>
+              <bucket>&quot;Rob Zombie&quot;</bucket>
+              <bucket>&quot;Rob Letterman&quot;</bucket>
+              <bucket>&quot;Rick Famuyiwa&quot;</bucket>
+              <bucket>&quot;Richie Smyth&quot;</bucket>
+              <bucket>&quot;Richard Curtis&quot;</bucket>
+              <bucket>&quot;Rich Moore&quot;</bucket>
+              <bucket>&quot;Ricardo de Montreuil&quot;</bucket>
+              <bucket>&quot;Rian Johnson&quot;</bucket>
+              <bucket>&quot;R.J. Cutler&quot;</bucket>
+              <bucket>&quot;Phyllida Lloyd&quot;</bucket>
+              <bucket>&quot;Phillip Guzman&quot;</bucket>
+              <bucket>&quot;Philippe Falardeau&quot;</bucket>
+              <bucket>&quot;Phil Claydon&quot;</bucket>
+              <bucket>&quot;Peter Landesman&quot;</bucket>
+              <bucket>&quot;Peter Billingsley&quot;</bucket>
+              <bucket>&quot;Peter Atencio&quot;</bucket>
+              <bucket>&quot;Pedro Almodóvar&quot;</bucket>
+              <bucket>&quot;Paul Verhoeven&quot;</bucket>
+              <bucket>&quot;Patrick Tatopoulos&quot;</bucket>
+              <bucket>&quot;Patrick Read Johnson&quot;</bucket>
+              <bucket>&quot;Patrick Hughes&quot;</bucket>
+              <bucket>&quot;Patricia Rozema&quot;</bucket>
+              <bucket>&quot;Patricia Riggen&quot;</bucket>
+              <bucket>&quot;Pascal Laugier&quot;</bucket>
+              <bucket>&quot;Paolo Sorrentino&quot;</bucket>
+              <bucket>&quot;Paolo Genovese&quot;</bucket>
+              <bucket>&quot;Paco Cabezas&quot;</bucket>
+              <bucket>&quot;Pablo Larraín&quot;</bucket>
+              <bucket>&quot;Oriol Paulo&quot;</bucket>
+              <bucket>&quot;Olivier Nakache&quot;</bucket>
+              <bucket>&quot;Olivier Megaton&quot;</bucket>
+              <bucket>&quot;Olivier Assayas&quot;</bucket>
+              <bucket>&quot;Noam Murro&quot;</bucket>
+              <bucket>&quot;Nitesh Tiwari&quot;</bucket>
+              <bucket>&quot;Nimród Antal&quot;</bucket>
+              <bucket>&quot;Nima Nourizadeh&quot;</bucket>
+              <bucket>&quot;Niels Arden Oplev&quot;</bucket>
+              <bucket>&quot;Nick Cassavetes&quot;</bucket>
+              <bucket>&quot;Nic Mathieu&quot;</bucket>
+              <bucket>&quot;Neil Marshall&quot;</bucket>
+              <bucket>&quot;Nathan Morlando&quot;</bucket>
+              <bucket>&quot;Nathan Greno&quot;</bucket>
+              <bucket>&quot;Naoko Yamada&quot;</bucket>
+              <bucket>&quot;Nancy Meyers&quot;</bucket>
+              <bucket>&quot;Nacho Vigalondo&quot;</bucket>
+              <bucket>&quot;Mora Stephens&quot;</bucket>
+              <bucket>&quot;Mira Nair&quot;</bucket>
+              <bucket>&quot;Mike Thurmeier&quot;</bucket>
+              <bucket>&quot;Mike Newell&quot;</bucket>
+              <bucket>&quot;Mike Mills&quot;</bucket>
+              <bucket>&quot;Mike Judge&quot;</bucket>
+              <bucket>&quot;Mike Cahill&quot;</bucket>
+              <bucket>&quot;Mike Birbiglia&quot;</bucket>
+              <bucket>&quot;Miguel Arteta&quot;</bucket>
+              <bucket>&quot;Mick Jackson&quot;</bucket>
+              <bucket>&quot;Micheal Bafaro&quot;</bucket>
+              <bucket>&quot;Michael Spierig&quot;</bucket>
+              <bucket>&quot;Michael Showalter&quot;</bucket>
+              <bucket>&quot;Michaël R. Roskam&quot;</bucket>
+              <bucket>&quot;Michael J. Gallagher&quot;</bucket>
+              <bucket>&quot;Michael Hoffman&quot;</bucket>
+              <bucket>&quot;Michael Haneke&quot;</bucket>
+              <bucket>&quot;Michael Grandage&quot;</bucket>
+              <bucket>&quot;Michael Goi&quot;</bucket>
+              <bucket>&quot;Michael Dudok de Wit&quot;</bucket>
+              <bucket>&quot;Mia Hansen-Løve&quot;</bucket>
+              <bucket>&quot;Max Joseph&quot;</bucket>
+              <bucket>&quot;Matthias Hoene&quot;</bucket>
+              <bucket>&quot;Matteo Garrone&quot;</bucket>
+              <bucket>&quot;Matt Ross&quot;</bucket>
+              <bucket>&quot;Matt Brown&quot;</bucket>
+              <bucket>&quot;Mateo Gil&quot;</bucket>
+              <bucket>&quot;Martin Koolhoven&quot;</bucket>
+              <bucket>&quot;Mark Williams&quot;</bucket>
+              <bucket>&quot;Mark Waters&quot;</bucket>
+              <bucket>&quot;Mark Steven Johnson&quot;</bucket>
+              <bucket>&quot;Mark Osborne&quot;</bucket>
+              <bucket>&quot;Mark Mylod&quot;</bucket>
+              <bucket>&quot;Mark Herman&quot;</bucket>
+              <bucket>&quot;Mark Andrews&quot;</bucket>
+              <bucket>&quot;Mario Van Peebles&quot;</bucket>
+              <bucket>&quot;Maren Ade&quot;</bucket>
+              <bucket>&quot;Marcus Dunstan&quot;</bucket>
+              <bucket>&quot;Måns Mårlind&quot;</bucket>
+              <bucket>&quot;Malcolm D. Lee&quot;</bucket>
+              <bucket>&quot;Makoto Shinkai&quot;</bucket>
+              <bucket>&quot;Lynne Ramsay&quot;</bucket>
+              <bucket>&quot;Luke Scott&quot;</bucket>
+              <bucket>&quot;Luke Greenfield&quot;</bucket>
+              <bucket>&quot;Luca Guadagnino&quot;</bucket>
+              <bucket>&quot;Lisa Addario&quot;</bucket>
+              <bucket>&quot;Liam Gavin&quot;</bucket>
+              <bucket>&quot;Levan Gabriadze&quot;</bucket>
+              <bucket>&quot;Leslye Headland&quot;</bucket>
+              <bucket>&quot;Lenny Abrahamson&quot;</bucket>
+              <bucket>&quot;Lee Unkrich&quot;</bucket>
+              <bucket>&quot;Lee Toland Krieger&quot;</bucket>
+              <bucket>&quot;Larry Charles&quot;</bucket>
+              <bucket>&quot;Lana Wachowski&quot;</bucket>
+              <bucket>&quot;Kyle Patrick Alvarez&quot;</bucket>
+              <bucket>&quot;Kyle Balda&quot;</bucket>
+              <bucket>&quot;Kirsten Sheridan&quot;</bucket>
+              <bucket>&quot;Kimberly Peirce&quot;</bucket>
+              <bucket>&quot;Kevin Lima&quot;</bucket>
+              <bucket>&quot;Kenneth Lonergan&quot;</bucket>
+              <bucket>&quot;Ken Loach&quot;</bucket>
+              <bucket>&quot;Ken Kwapis&quot;</bucket>
+              <bucket>&quot;Kelly Fremon Craig&quot;</bucket>
+              <bucket>&quot;Katie Holmes&quot;</bucket>
+              <bucket>&quot;Justin Tipping&quot;</bucket>
+              <bucket>&quot;Justin Simien&quot;</bucket>
+              <bucket>&quot;Justin Kelly&quot;</bucket>
+              <bucket>&quot;Justin Chadwick&quot;</bucket>
+              <bucket>&quot;Julie Taymor&quot;</bucket>
+              <bucket>&quot;Julia Leigh&quot;</bucket>
+              <bucket>&quot;Julia Ducournau&quot;</bucket>
+              <bucket>&quot;Juan José Campanella&quot;</bucket>
+              <bucket>&quot;Juan Carlos Fresnadillo&quot;</bucket>
+              <bucket>&quot;Josh Trank&quot;</bucket>
+              <bucket>&quot;Josh Gordon&quot;</bucket>
+              <bucket>&quot;Josh Boone&quot;</bucket>
+              <bucket>&quot;Joseph Gordon-Levitt&quot;</bucket>
+              <bucket>&quot;Joseph Cedar&quot;</bucket>
+              <bucket>&quot;José Padilha&quot;</bucket>
+              <bucket>&quot;Jorge R. Gutiérrez&quot;</bucket>
+              <bucket>&quot;Jordan Vogt-Roberts&quot;</bucket>
+              <bucket>&quot;Jonathan Jakubowicz&quot;</bucket>
+              <bucket>&quot;Jonathan Holbrook&quot;</bucket>
+              <bucket>&quot;Jonathan Glazer&quot;</bucket>
+              <bucket>&quot;Jonathan Dayton&quot;</bucket>
+              <bucket>&quot;Jon Watts&quot;</bucket>
+              <bucket>&quot;Jon S. Baird&quot;</bucket>
+              <bucket>&quot;Jon Lucas&quot;</bucket>
+              <bucket>&quot;Jon Kasdan&quot;</bucket>
+              <bucket>&quot;Jon Hurwitz&quot;</bucket>
+              <bucket>&quot;John Wells&quot;</bucket>
+              <bucket>&quot;John Stockwell&quot;</bucket>
+              <bucket>&quot;John Moore&quot;</bucket>
+              <bucket>&quot;John Michael McDonagh&quot;</bucket>
+              <bucket>&quot;John Madden&quot;</bucket>
+              <bucket>&quot;John Luessenhop&quot;</bucket>
+              <bucket>&quot;John Krasinski&quot;</bucket>
+              <bucket>&quot;John Hamburg&quot;</bucket>
+              <bucket>&quot;John Francis Daley&quot;</bucket>
+              <bucket>&quot;John Erick Dowdle&quot;</bucket>
+              <bucket>&quot;John Butler&quot;</bucket>
+              <bucket>&quot;Joey Curtis&quot;</bucket>
+              <bucket>&quot;Joel Edgerton&quot;</bucket>
+              <bucket>&quot;Joe Johnston&quot;</bucket>
+              <bucket>&quot;Joe Carnahan&quot;</bucket>
+              <bucket>&quot;Jodie Foster&quot;</bucket>
+              <bucket>&quot;Jocelyn Moorhouse&quot;</bucket>
+              <bucket>&quot;Jim Sheridan&quot;</bucket>
+              <bucket>&quot;Jim Mickle&quot;</bucket>
+              <bucket>&quot;Jim Jarmusch&quot;</bucket>
+              <bucket>&quot;Jim Field Smith&quot;</bucket>
+              <bucket>&quot;Jérôme Salle&quot;</bucket>
+              <bucket>&quot;Jeremy Saulnier&quot;</bucket>
+              <bucket>&quot;Jeremy Gillespie&quot;</bucket>
+              <bucket>&quot;Jennifer Kent&quot;</bucket>
+              <bucket>&quot;Jemaine Clement&quot;</bucket>
+              <bucket>&quot;Jeffrey G. Hunt&quot;</bucket>
+              <bucket>&quot;Jeff Grace&quot;</bucket>
+              <bucket>&quot;Jee-woon Kim&quot;</bucket>
+              <bucket>&quot;Jean-François Richet&quot;</bucket>
+              <bucket>&quot;Jason Friedberg&quot;</bucket>
+              <bucket>&quot;Jared Hess&quot;</bucket>
+              <bucket>&quot;Jamie Linden&quot;</bucket>
+              <bucket>&quot;James Wong&quot;</bucket>
+              <bucket>&quot;James Watkins&quot;</bucket>
+              <bucket>&quot;James Ward Byrkit&quot;</bucket>
+              <bucket>&quot;James Schamus&quot;</bucket>
+              <bucket>&quot;James Ponsoldt&quot;</bucket>
+              <bucket>&quot;James Marsh&quot;</bucket>
+              <bucket>&quot;James Mangold&quot;</bucket>
+              <bucket>&quot;James Lapine&quot;</bucket>
+              <bucket>&quot;James Gray&quot;</bucket>
+              <bucket>&quot;James Franco&quot;</bucket>
+              <bucket>&quot;James Cameron&quot;</bucket>
+              <bucket>&quot;James Bobin&quot;</bucket>
+              <bucket>&quot;Jamal Hill&quot;</bucket>
+              <bucket>&quot;Jalil Lespert&quot;</bucket>
+              <bucket>&quot;Jake Szymanski&quot;</bucket>
+              <bucket>&quot;Jake Schreier&quot;</bucket>
+              <bucket>&quot;Jake Kasdan&quot;</bucket>
+              <bucket>&quot;Jaco Van Dormael&quot;</bucket>
+              <bucket>&quot;Jackson Stewart&quot;</bucket>
+              <bucket>&quot;J.D. Dillard&quot;</bucket>
+              <bucket>&quot;J Blakeson&quot;</bucket>
+              <bucket>&quot;Ivan Reitman&quot;</bucket>
+              <bucket>&quot;Ilya Naishuller&quot;</bucket>
+              <bucket>&quot;Ido Fluk&quot;</bucket>
+              <bucket>&quot;Hugo Gélin&quot;</bucket>
+              <bucket>&quot;Hope Dickson Leach&quot;</bucket>
+              <bucket>&quot;Hong-jin Na&quot;</bucket>
+              <bucket>&quot;Hisonni Johnson&quot;</bucket>
+              <bucket>&quot;Hideaki Anno&quot;</bucket>
+              <bucket>&quot;Henry Selick&quot;</bucket>
+              <bucket>&quot;Harmony Korine&quot;</bucket>
+              <bucket>&quot;Hannes Holm&quot;</bucket>
+              <bucket>&quot;Gus Van Sant&quot;</bucket>
+              <bucket>&quot;Gregory Wilson&quot;</bucket>
+              <bucket>&quot;Gregory Jacobs&quot;</bucket>
+              <bucket>&quot;Gregory Hoblit&quot;</bucket>
+              <bucket>&quot;Greg Tiernan&quot;</bucket>
+              <bucket>&quot;Greg McLean&quot;</bucket>
+              <bucket>&quot;Greg Kwedar&quot;</bucket>
+              <bucket>&quot;Greg Berlanti&quot;</bucket>
+              <bucket>&quot;Giuseppe Tornatore&quot;</bucket>
+              <bucket>&quot;Gillies MacKinnon&quot;</bucket>
+              <bucket>&quot;Gilles Paquet-Brenner&quot;</bucket>
+              <bucket>&quot;Genndy Tartakovsky&quot;</bucket>
+              <bucket>&quot;Gee Malik Linton&quot;</bucket>
+              <bucket>&quot;Gauri Shinde&quot;</bucket>
+              <bucket>&quot;Gaspar Noé&quot;</bucket>
+              <bucket>&quot;Gary Winick&quot;</bucket>
+              <bucket>&quot;Gary Shore&quot;</bucket>
+              <bucket>&quot;Gary Michael Schultz&quot;</bucket>
+              <bucket>&quot;Garth Davis&quot;</bucket>
+              <bucket>&quot;Garry Marshall&quot;</bucket>
+              <bucket>&quot;Gabor Csupo&quot;</bucket>
+              <bucket>&quot;Fred Wolf&quot;</bucket>
+              <bucket>&quot;Frank Miller&quot;</bucket>
+              <bucket>&quot;Frank Darabont&quot;</bucket>
+              <bucket>&quot;François Simard&quot;</bucket>
+              <bucket>&quot;François Ozon&quot;</bucket>
+              <bucket>&quot;Florian Henckel von Donnersmarck&quot;</bucket>
+              <bucket>&quot;Florian Gallenberger&quot;</bucket>
+              <bucket>&quot;Filip Renc&quot;</bucket>
+              <bucket>&quot;Femi Oyeniran&quot;</bucket>
+              <bucket>&quot;Farren Blackburn&quot;</bucket>
+              <bucket>&quot;Fabio Guaglione&quot;</bucket>
+              <bucket>&quot;Ewan McGregor&quot;</bucket>
+              <bucket>&quot;Etan Cohen&quot;</bucket>
+              <bucket>&quot;Erik Van Looy&quot;</bucket>
+              <bucket>&quot;Ericson Core&quot;</bucket>
+              <bucket>&quot;Eric Summer&quot;</bucket>
+              <bucket>&quot;Eran Creevy&quot;</bucket>
+              <bucket>&quot;Elizabeth Wood&quot;</bucket>
+              <bucket>&quot;Eleanor Coppola&quot;</bucket>
+              <bucket>&quot;Ed Gass-Donnelly&quot;</bucket>
+              <bucket>&quot;Drew Goddard&quot;</bucket>
+              <bucket>&quot;Drake Doremus&quot;</bucket>
+              <bucket>&quot;Doug Ellin&quot;</bucket>
+              <bucket>&quot;Don Hall&quot;</bucket>
+              <bucket>&quot;Dominique Abel&quot;</bucket>
+              <bucket>&quot;Dito Montiel&quot;</bucket>
+              <bucket>&quot;Dexter Fletcher&quot;</bucket>
+              <bucket>&quot;Denzel Washington&quot;</bucket>
+              <bucket>&quot;Dennis Gansel&quot;</bucket>
+              <bucket>&quot;Debra Granik&quot;</bucket>
+              <bucket>&quot;David Twohy&quot;</bucket>
+              <bucket>&quot;David Slade&quot;</bucket>
+              <bucket>&quot;David Schwimmer&quot;</bucket>
+              <bucket>&quot;David Ross&quot;</bucket>
+              <bucket>&quot;David Robert Mitchell&quot;</bucket>
+              <bucket>&quot;David R. Ellis&quot;</bucket>
+              <bucket>&quot;David Mackenzie&quot;</bucket>
+              <bucket>&quot;David Lowery&quot;</bucket>
+              <bucket>&quot;David Leveaux&quot;</bucket>
+              <bucket>&quot;David F. Sandberg&quot;</bucket>
+              <bucket>&quot;David Dobkin&quot;</bucket>
+              <bucket>&quot;David Cronenberg&quot;</bucket>
+              <bucket>&quot;Dave Green&quot;</bucket>
+              <bucket>&quot;Daniel Ragussis&quot;</bucket>
+              <bucket>&quot;Daniel Espinosa&quot;</bucket>
+              <bucket>&quot;Dan Trachtenberg&quot;</bucket>
+              <bucket>&quot;Dan Scanlon&quot;</bucket>
+              <bucket>&quot;Dan Mazer&quot;</bucket>
+              <bucket>&quot;Dan Kwan&quot;</bucket>
+              <bucket>&quot;Dan Gilroy&quot;</bucket>
+              <bucket>&quot;Dan Bradley&quot;</bucket>
+              <bucket>&quot;Dan Berk&quot;</bucket>
+              <bucket>&quot;Damián Szifron&quot;</bucket>
+              <bucket>&quot;Cristian Mungiu&quot;</bucket>
+              <bucket>&quot;Craig Gillespie&quot;</bucket>
+              <bucket>&quot;Craig Brewer&quot;</bucket>
+              <bucket>&quot;Courtney Hunt&quot;</bucket>
+              <bucket>&quot;Corey Asraf&quot;</bucket>
+              <bucket>&quot;Colm McCarthy&quot;</bucket>
+              <bucket>&quot;Colin Trevorrow&quot;</bucket>
+              <bucket>&quot;Colin Strause&quot;</bucket>
+              <bucket>&quot;Clay Kaytis&quot;</bucket>
+              <bucket>&quot;Claude Barras&quot;</bucket>
+              <bucket>&quot;Christopher Landon&quot;</bucket>
+              <bucket>&quot;Christophe Lourdelet&quot;</bucket>
+              <bucket>&quot;Christophe Gans&quot;</bucket>
+              <bucket>&quot;Christian Alvart&quot;</bucket>
+              <bucket>&quot;Chris Weitz&quot;</bucket>
+              <bucket>&quot;Chris Wedge&quot;</bucket>
+              <bucket>&quot;Chris Stokes&quot;</bucket>
+              <bucket>&quot;Chris Renaud&quot;</bucket>
+              <bucket>&quot;Chris McCoy&quot;</bucket>
+              <bucket>&quot;Chris Evans&quot;</bucket>
+              <bucket>&quot;Chris Buck&quot;</bucket>
+              <bucket>&quot;Chan-wook Park&quot;</bucket>
+              <bucket>&quot;Chad Stahelski&quot;</bucket>
+              <bucket>&quot;Cedric Nicolas-Troyan&quot;</bucket>
+              <bucket>&quot;Catherine Hardwicke&quot;</bucket>
+              <bucket>&quot;Cary Joji Fukunaga&quot;</bucket>
+              <bucket>&quot;Carlos Saldanha&quot;</bucket>
+              <bucket>&quot;Carles Torrens&quot;</bucket>
+              <bucket>&quot;Caleb Vetter&quot;</bucket>
+              <bucket>&quot;Byron Howard&quot;</bucket>
+              <bucket>&quot;Bryan Bertino&quot;</bucket>
+              <bucket>&quot;Bruce Beresford&quot;</bucket>
+              <bucket>&quot;Bruce A. Evans&quot;</bucket>
+              <bucket>&quot;Breck Eisner&quot;</bucket>
+              <bucket>&quot;Brad Peyton&quot;</bucket>
+              <bucket>&quot;Brad Furman&quot;</bucket>
+              <bucket>&quot;Bobby Farrelly&quot;</bucket>
+              <bucket>&quot;Boaz Yakin&quot;</bucket>
+              <bucket>&quot;Biyi Bandele&quot;</bucket>
+              <bucket>&quot;Billy Ray&quot;</bucket>
+              <bucket>&quot;Bennett Miller&quot;</bucket>
+              <bucket>&quot;Ben Younger&quot;</bucket>
+              <bucket>&quot;Ben Young&quot;</bucket>
+              <bucket>&quot;Ben Falcone&quot;</bucket>
+              <bucket>&quot;Barry Jenkins&quot;</bucket>
+              <bucket>&quot;Baltasar Kormákur&quot;</bucket>
+              <bucket>&quot;Babak Najafi&quot;</bucket>
+              <bucket>&quot;Ava DuVernay&quot;</bucket>
+              <bucket>&quot;Atom Egoyan&quot;</bucket>
+              <bucket>&quot;Ash Brannon&quot;</bucket>
+              <bucket>&quot;Asghar Farhadi&quot;</bucket>
+              <bucket>&quot;Asger Leth&quot;</bucket>
+              <bucket>&quot;Ariel Vromen&quot;</bucket>
+              <bucket>&quot;Ari Sandel&quot;</bucket>
+              <bucket>&quot;April Mullen&quot;</bucket>
+              <bucket>&quot;Antonio Campos&quot;</bucket>
+              <bucket>&quot;Anne Fontaine&quot;</bucket>
+              <bucket>&quot;Anna Foerster&quot;</bucket>
+              <bucket>&quot;Anna Biller&quot;</bucket>
+              <bucket>&quot;Angelina Jolie&quot;</bucket>
+              <bucket>&quot;Andy Tennant&quot;</bucket>
+              <bucket>&quot;Andy Goddard&quot;</bucket>
+              <bucket>&quot;Andy Fickman&quot;</bucket>
+              <bucket>&quot;Andrey Kravchuk&quot;</bucket>
+              <bucket>&quot;Andrew Jarecki&quot;</bucket>
+              <bucket>&quot;Andrew Dominik&quot;</bucket>
+              <bucket>&quot;Andrés Muschietti&quot;</bucket>
+              <bucket>&quot;Andrea Arnold&quot;</bucket>
+              <bucket>&quot;André Øvredal&quot;</bucket>
+              <bucket>&quot;Ana Lily Amirpour&quot;</bucket>
+              <bucket>&quot;Amma Asante&quot;</bucket>
+              <bucket>&quot;Amber Tamblyn&quot;</bucket>
+              <bucket>&quot;Allen Coulter&quot;</bucket>
+              <bucket>&quot;Alfonso Gomez-Rejon&quot;</bucket>
+              <bucket>&quot;Alexi Pappas&quot;</bucket>
+              <bucket>&quot;Alexandros Avranas&quot;</bucket>
+              <bucket>&quot;Alexander Payne&quot;</bucket>
+              <bucket>&quot;Alex Ranarivelo&quot;</bucket>
+              <bucket>&quot;Alex Proyas&quot;</bucket>
+              <bucket>&quot;Alex Garland&quot;</bucket>
+              <bucket>&quot;Alessandro Carloni&quot;</bucket>
+              <bucket>&quot;Alejandro Amenábar&quot;</bucket>
+              <bucket>&quot;Albert Hughes&quot;</bucket>
+              <bucket>&quot;Akiva Schaffer&quot;</bucket>
+              <bucket>&quot;Akan Satayev&quot;</bucket>
+              <bucket>&quot;Aisling Walsh&quot;</bucket>
+              <bucket>&quot;Afonso Poyart&quot;</bucket>
+              <bucket>&quot;Adam Leon&quot;</bucket>
+              <bucket>&quot;Abdellatif Kechiche&quot;</bucket>
+              <bucket>&quot;Aamir Khan&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Director:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]' scope='rows' value='Number of Movies' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='tick-color' value='#000000' />
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#128bb5' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]</rows>
+        <cols>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Director:nk]</cols>
+      </table>
+      <simple-id uuid='{FCA2FF6D-6D95-4AEF-B227-C57E0F45BC1C}' />
+    </worksheet>
+    <worksheet name='Top 10 Genre'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Top 10 Genre by Movies</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Title]' derivation='CountD' name='[ctd:Title:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Genre]' derivation='None' name='[none:Genre:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Genre:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNTD([Title])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Genre:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Genre:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Genre:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]' scope='rows' value='Number of Movies' />
+            <encoding attr='space' class='0' field='[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]' field-type='quantitative' max='60' min='-21' range-type='fixed' scope='rows' type='space' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='tick-color' value='#000000' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#128bb5' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0jndpd31byytfi1eskx8s08rpf1g].[ctd:Title:qk]</rows>
+        <cols>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Genre:nk]</cols>
+      </table>
+      <simple-id uuid='{41C36F89-C4F0-4765-B226-F43BF62C8910}' />
+    </worksheet>
+    <worksheet name='Year'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Title:nk]' member='&quot;Transformers: Dark of the Moon&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#deb522' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Year:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9C227D69-4169-483E-A548-2B87E8925403}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='IMDb Dashboard'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#e9f3f2' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1800' minheight='900' minwidth='1800' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='IMDB-Movie-Data' name='federated.0jndpd31byytfi1eskx8s08rpf1g' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0jndpd31byytfi1eskx8s08rpf1g'>
+        <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+        <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='13' param='horz' type-v2='layout-flow' w='99112' x='444' y='889'>
+            <zone h='98222' id='11' type-v2='layout-basic' w='99112' x='444' y='889'>
+              <zone h='35222' id='3' name='Movies over Years' w='33036' x='444' y='63889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='35222' id='5' name='Average Rating over Years' w='33037' x='33480' y='63889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='35222' id='6' name='Revenue over Years' w='33039' x='66517' y='63889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='43333' id='7' name='Top 10 Directors' w='33036' x='444' y='20556'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='43333' id='8' name='Revenue vs. Rating' w='33037' x='33480' y='20556'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='43333' id='9' name='Top 10 Genre' w='33039' x='66517' y='20556'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='19667' id='10' name='Description' w='22592' x='60444' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='9778' id='15' name='Year' w='16518' x='444' y='10778'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='19667' id='16' name='Rating' w='11547' x='16962' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='19667' id='17' name='Genre' w='16520' x='83036' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='9889' id='14' mode='dropdown' name='Description' param='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' show-all='false' type-v2='filter' w='16518' x='444' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+              <zone h='19667' id='19' name='Director' w='31935' x='28509' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#fcf7f7' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#fcf7f7' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2600' minheight='2600' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='32' param='vert' type-v2='layout-flow' w='99112' x='444' y='889'>
+                <zone fixed-size='169' h='19667' id='16' is-fixed='true' name='Rating' w='11547' x='16962' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='169' h='19667' id='19' is-fixed='true' name='Director' w='31935' x='28509' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone h='9889' id='14' mode='dropdown' name='Description' param='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' show-all='false' type-v2='filter' w='16518' x='444' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='169' h='19667' id='10' is-fixed='true' name='Description' w='22592' x='60444' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='169' h='19667' id='17' is-fixed='true' name='Genre' w='16520' x='83036' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='80' h='9778' id='15' is-fixed='true' name='Year' w='16518' x='444' y='10778'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43333' id='7' is-fixed='true' name='Top 10 Directors' w='33036' x='444' y='20556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43333' id='8' is-fixed='true' name='Revenue vs. Rating' w='33037' x='33480' y='20556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43333' id='9' is-fixed='true' name='Top 10 Genre' w='33039' x='66517' y='20556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35222' id='3' is-fixed='true' name='Movies over Years' w='33036' x='444' y='63889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35222' id='5' is-fixed='true' name='Average Rating over Years' w='33037' x='33480' y='63889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35222' id='6' is-fixed='true' name='Revenue over Years' w='33039' x='66517' y='63889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fcf7f7' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#fcf7f7' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{67E7D0B7-23B7-4D1F-AF14-C5AF1740F1AB}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Movies over Years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{872485C7-807D-4549-8BB2-2567B3AC5D8B}' />
+    </window>
+    <window class='worksheet' name='Average Rating over Years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4D68B787-1DE0-4CEA-80B8-25B9DED3CF5D}' />
+    </window>
+    <window class='worksheet' name='Revenue over Years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{30EEADFE-8F2C-4F99-9963-FC62B2B36454}' />
+    </window>
+    <window class='worksheet' name='Top 10 Directors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C9D94C9D-2BD6-4285-AEBA-5A4FD8BDF6B9}' />
+    </window>
+    <window class='worksheet' name='Revenue vs. Rating'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E46EE6D6-C445-42CB-824A-895771F60B41}' />
+    </window>
+    <window class='worksheet' name='Top 10 Genre'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B6AA332F-5F3A-4D3A-B7F0-C86A8CDE32A4}' />
+    </window>
+    <window class='worksheet' name='Description'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A68C714A-481A-4BA8-9852-EC575DE1252D}' />
+    </window>
+    <window class='worksheet' name='Genre'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C80DBEA4-4DE2-468C-9D38-D258361D3BFB}' />
+    </window>
+    <window class='worksheet' name='Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+          <strip size='150'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{59C6D0F1-6BC0-4C15-B43C-4E28AC53269B}' />
+    </window>
+    <window class='worksheet' name='Rating'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7A483813-CFCC-4A66-A9B8-AABCE7120CA2}' />
+    </window>
+    <window class='worksheet' name='Director'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0jndpd31byytfi1eskx8s08rpf1g].[none:Title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{1798FBED-58F3-4196-AED8-B8D67A7B38D0}' />
+    </window>
+    <window class='dashboard' maximized='true' name='IMDb Dashboard'>
+      <viewpoints>
+        <viewpoint name='Average Rating over Years'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Description'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Director'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Genre'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Movies over Years'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rating'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue over Years'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue vs. Rating'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Directors'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Genre'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='14' />
+      <device-preview visible='true' />
+      <simple-id uuid='{A72851EA-5E24-4900-947B-CE19297B4AFB}' />
+    </window>
+  </windows>
+</workbook>
